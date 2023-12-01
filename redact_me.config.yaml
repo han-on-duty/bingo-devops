@@ -1,0 +1,10 @@
+student_email: uch.fs@yandex.ru
+postgres_cluster:
+  hosts:
+  - address: ip_address_pgboucer
+    port: 6432
+  user: postgres
+  password: postgres
+  db_name: postgres
+  ssl_mode: disable
+  use_closest_node: false

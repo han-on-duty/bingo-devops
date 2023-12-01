@@ -1,0 +1,15 @@
+[Unit]
+Description=bingo
+ConditionPathExists=/home/admin/bingo
+After=network.target
+[Service]
+PIDFile=/opt/bingo/bingo.pid
+WorkingDirectory=/home/admin/
+User=admin
+Group=admin
+OOMScoreAdjust=-500
+ExecStart=/home/admin/bingo run_server
+Restart=always
+RestartSec=1
+[Install]
+WantedBy=multi-user.target
